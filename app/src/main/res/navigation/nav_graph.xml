@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioRolFragment">
+
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.agroexpress.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home">
+
+    </activity>
+    <fragment
+        android:id="@+id/iniciarSesionFragment"
+        android:name="com.example.agroexpress.IniciarSesionFragment"
+        android:label="fragment_iniciar_sesion"
+        tools:layout="@layout/fragment_iniciar_sesion" />
+    <fragment
+        android:id="@+id/registrarFragment"
+        android:name="com.example.agroexpress.RegistrarFragment"
+        android:label="fragment_registrar"
+        tools:layout="@layout/fragment_registrar" />
+    <fragment
+        android:id="@+id/inicioRolFragment"
+        android:name="com.example.agroexpress.InicioRolFragment"
+        android:label="InicioRolFragment"
+        tools:layout="@layout/activity_inicio_roles">
+        <action
+            android:id="@+id/action_inicioRolFragment_to_masOpcionesFragment"
+            app:destination="@id/masOpcionesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/masOpcionesFragment"
+        android:name="com.example.agroexpress.MasOpcionesFragment"
+        android:label="fragment_mas_opciones"
+        tools:layout="@layout/fragment_mas_opciones" >
+        <action
+            android:id="@+id/action_masOpcionesFragment_to_perfilFragment"
+            app:destination="@id/perfilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.example.agroexpress.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <activity
+        android:id="@+id/configuracionActivity"
+        android:name="com.example.agroexpress.ConfiguracionActivity"
+        android:label="ConfiguracionActivity" />
+    <activity
+        android:id="@+id/adminCampesinosActivity"
+        android:name="com.example.agroexpress.AdminCampesinosActivity"
+        android:label="activity_admin_campesinos"
+        tools:layout="@layout/activity_admin_campesinos" />
+</navigation>
