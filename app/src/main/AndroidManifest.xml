@@ -15,6 +15,20 @@
         android:theme="@style/Theme.Agroexpress"
         tools:targetApi="31">
         <activity
+            android:name=".Activity_soporte"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity_admin_Pedidos"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".AdminCampesinosActivity"
             android:exported="false">
             <meta-data

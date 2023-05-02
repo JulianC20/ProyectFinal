@@ -58,7 +58,6 @@ class MasOpcionesFragment : Fragment() {
             val intent=Intent(getActivity(),AdminCampesinosActivity::class.java)
             startActivity(intent)
         }
-
     }
 
 
