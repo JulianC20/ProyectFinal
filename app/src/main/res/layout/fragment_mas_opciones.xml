@@ -71,6 +71,7 @@
                 android:textAlignment="textStart" />
 
             <Button
+                android:id="@+id/btnDespachos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
@@ -79,6 +80,7 @@
                 android:textAlignment="textStart" />
 
             <Button
+                android:id="@+id/btnEntrega"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
@@ -87,6 +89,7 @@
                 android:textAlignment="textStart" />
 
             <Button
+                android:id="@+id/btnPedidos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
@@ -95,6 +98,7 @@
                 android:textAlignment="textStart" />
 
             <Button
+                android:id="@+id/btnSoporte"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
@@ -103,6 +107,7 @@
                 android:textAlignment="textStart" />
 
             <Button
+                android:id="@+id/btnDevolucion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
@@ -120,6 +125,7 @@
                 android:textAlignment="textStart" />
 
             <Button
+                android:id="@+id/btnTransportador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"

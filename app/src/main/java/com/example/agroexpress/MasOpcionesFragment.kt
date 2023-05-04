@@ -51,10 +51,51 @@ class MasOpcionesFragment : Fragment() {
             startActivity(intent)
         }
 
-
         super.onViewCreated(view, savedInstanceState)
         val bottomProd:Button=view.findViewById(R.id.btnProducto)
         bottomProd.setOnClickListener {
+            val intent=Intent(getActivity(),AdminCampesinosActivity::class.java)
+            startActivity(intent)
+        }
+
+        super.onViewCreated(view, savedInstanceState)
+        val bottomDesp:Button=view.findViewById(R.id.btnDespachos)
+        bottomDesp.setOnClickListener {
+            val intent=Intent(getActivity(),AdminCampesinosActivity::class.java)
+            startActivity(intent)
+        }
+
+        super.onViewCreated(view, savedInstanceState)
+        val bottomEntre:Button=view.findViewById(R.id.btnEntrega)
+        bottomEntre.setOnClickListener {
+            val intent=Intent(getActivity(),AdminCampesinosActivity::class.java)
+            startActivity(intent)
+        }
+
+        super.onViewCreated(view, savedInstanceState)
+        val bottomPedid:Button=view.findViewById(R.id.btnPedidos)
+        bottomPedid.setOnClickListener {
+            val intent=Intent(getActivity(),AdminCampesinosActivity::class.java)
+            startActivity(intent)
+        }
+
+        super.onViewCreated(view, savedInstanceState)
+        val bottomSopor:Button=view.findViewById(R.id.btnSoporte)
+        bottomSopor.setOnClickListener {
+            val intent=Intent(getActivity(),AdminCampesinosActivity::class.java)
+            startActivity(intent)
+        }
+
+        super.onViewCreated(view, savedInstanceState)
+        val bottomDevo:Button=view.findViewById(R.id.btnDevolucion)
+        bottomDevo.setOnClickListener {
+            val intent=Intent(getActivity(),AdminCampesinosActivity::class.java)
+            startActivity(intent)
+        }
+
+        super.onViewCreated(view, savedInstanceState)
+        val bottomTrans:Button=view.findViewById(R.id.btnTransportador)
+        bottomTrans.setOnClickListener {
             val intent=Intent(getActivity(),AdminCampesinosActivity::class.java)
             startActivity(intent)
         }
