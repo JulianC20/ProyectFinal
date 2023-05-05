@@ -4,50 +4,52 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.agroexpress.Modelos.Producto
 import com.example.agroexpress.R
 import org.json.JSONArray
 import org.json.JSONObject
 
-class ProductoAdaptador (private val ProductoListener: ProductoListener) : RecyclerView.Adapter<ProductoAdaptador.ViewHolder>(){
-    val  listProducto = ArrayList<Producto>()
+class ProductoAdaptador (private val ProductoList: ArrayList<JSONObject>, private val itemListener: ItemListener) : RecyclerView.Adapter<ProductoAdaptador.ViewHolder>(){
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType:Int)= ViewHolder(LayoutInflater.from(parent.context).inflate(
-        R.layout.fragment_com_productos, parent,false))
+    inner class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
+        var imagen: ImageView = view.findViewById(R.id.tvimg_producto)
+        var nombre: TextView = view.findViewById(R.id.tvnombre_producto)
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int){
-        val product =listProducto[position]
+        fun bind(Producto: JSONObject){
+            nombre.text = Producto.getString("LisP_Nombre")
+
+        }
+    }
+    override  fun  onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
+        LayoutInflater
+            .from(parent.context)
+            .inflate(R.layout.item_producto,parent,false)
+    )
+    override fun getItemCount() = this.ProductoList.size
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val product = ProductoList[position]
 
         try{
-            holder.tvNombreP.text= product.Pro_Nombre
-            holder.tvPrecioP.text= product.Pro_Precio
-            holder.tvLoteP.text= product.Pro_Lote
+            Glide.with(holder.itemView.context)
+                .load(product.get("LisP_UrlImg"))
+                .into(holder.imagen)
+            holder.bind(product)
+
             holder.itemView.setOnClickListener{
-                //hola
+                itemListener.onItemClicked(product,position)
             }
-        }catch (e: Exception){
-            Log.w("Productdatos", "No cargan datos")
+
+        }catch (e : Exception){
+            Log.w("Productosdatos", "No cargan datos")
         }
-
-    }
-
-    fun updateData(data:kotlin.collections.List<Producto>){
-        listProducto.clear()
-        listProducto.addAll(data)
-        notifyDataSetChanged()
-    }
-    class ViewHolder(itemView:View):RecyclerView.ViewHolder(itemView) {
-        val tvNombreP=itemView.findViewById<TextView>(R.id.nombreComProducto)
-        val tvPrecioP=itemView.findViewById<TextView>(R.id.precioComProducto)
-        val tvLoteP=itemView.findViewById<TextView>(R.id.cantidadComProducto)
-    }
-
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
     }
 
 
 }
+

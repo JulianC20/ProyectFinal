@@ -47,7 +47,7 @@ class MasOpcionesFragment : Fragment() {
         this.btnProducto =ll.findViewById(R.id.btnProducto)
 
         btnProducto.setOnClickListener{
-            val navController = Navigation.findNavController(requireActivity(), androidx.navigation.fragment.R.id.nav_host_fragment_container)
+            val navController = Navigation.findNavController(requireActivity(), R.id.btnProducto)
             navController.navigate(R.id.produc_RecyclerFragment)
         }
         return ll

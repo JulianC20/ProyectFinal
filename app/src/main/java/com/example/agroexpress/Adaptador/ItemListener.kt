@@ -4,5 +4,5 @@ import org.json.JSONObject
 import java.text.FieldPosition
 
 interface ItemListener {
-    fun onItemClicked(campesinos: JSONObject, position: Int)
+    fun onItemClicked(product: JSONObject, position: Int)
 }
