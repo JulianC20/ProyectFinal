@@ -15,6 +15,15 @@
         android:theme="@style/Theme.Agroexpress"
         tools:targetApi="31">
         <activity
+            android:name=".edit_Product_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_Edit_Activity2"
+            android:exported="false" />
+        <activity
+            android:name=".edit_Producto_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Activity_admin_transportador"
             android:exported="false">
             <meta-data

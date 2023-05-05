@@ -34,7 +34,8 @@
                         android:layout_marginLeft="40dp"
                         android:src="@drawable/manzanas"/>
 
-                    <ImageView
+                    <Button
+                        android:id="@+id/btnEditProduc"
                         android:layout_width="25dp"
                         android:layout_height="wrap_content"
                         android:src="@drawable/edtarproduct"
