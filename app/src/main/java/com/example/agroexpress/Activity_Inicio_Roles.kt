@@ -17,8 +17,8 @@ class Activity_Inicio_Roles : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inicio_roles)
     }
-    fun buscar(view: View) {
+   /* fun buscar(view: View) {
         val intent = Intent(this, AdminCampesinosActivity::class.java).apply { }
         startActivity(intent)
-    }
+    }*/
 }

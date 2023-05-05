@@ -6,6 +6,6 @@ import android.os.Bundle
 class AdminCampesinosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_admi_productos)
+        setContentView(R.layout.fragment_admi_campesinos)
     }
 }

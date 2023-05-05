@@ -6,6 +6,6 @@ import android.os.Bundle
 class Activity_admin_transportador : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_admin_transportador)
+        setContentView(R.layout.fragment_admi_transportador)
     }
 }

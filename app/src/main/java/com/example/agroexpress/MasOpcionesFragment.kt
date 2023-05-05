@@ -54,49 +54,49 @@ class MasOpcionesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val bottomProd:Button=view.findViewById(R.id.btnProducto)
         bottomProd.setOnClickListener {
-            val intent=Intent(getActivity(),AdminCampesinosActivity::class.java)
+            val intent=Intent(getActivity(),Activity_admin_productos::class.java)
             startActivity(intent)
         }
 
         super.onViewCreated(view, savedInstanceState)
         val bottomDesp:Button=view.findViewById(R.id.btnDespachos)
         bottomDesp.setOnClickListener {
-            val intent=Intent(getActivity(),AdminCampesinosActivity::class.java)
+            val intent=Intent(getActivity(),activity_admin_despachos::class.java)
             startActivity(intent)
         }
 
         super.onViewCreated(view, savedInstanceState)
         val bottomEntre:Button=view.findViewById(R.id.btnEntrega)
         bottomEntre.setOnClickListener {
-            val intent=Intent(getActivity(),AdminCampesinosActivity::class.java)
+            val intent=Intent(getActivity(),activity_admin_entrega::class.java)
             startActivity(intent)
         }
 
         super.onViewCreated(view, savedInstanceState)
         val bottomPedid:Button=view.findViewById(R.id.btnPedidos)
         bottomPedid.setOnClickListener {
-            val intent=Intent(getActivity(),AdminCampesinosActivity::class.java)
+            val intent=Intent(getActivity(),Activity_admin_Pedidos::class.java)
             startActivity(intent)
         }
 
         super.onViewCreated(view, savedInstanceState)
         val bottomSopor:Button=view.findViewById(R.id.btnSoporte)
         bottomSopor.setOnClickListener {
-            val intent=Intent(getActivity(),AdminCampesinosActivity::class.java)
+            val intent=Intent(getActivity(),Activity_soporte::class.java)
             startActivity(intent)
         }
 
         super.onViewCreated(view, savedInstanceState)
         val bottomDevo:Button=view.findViewById(R.id.btnDevolucion)
         bottomDevo.setOnClickListener {
-            val intent=Intent(getActivity(),AdminCampesinosActivity::class.java)
+            val intent=Intent(getActivity(),Activity_admin_devoluciones::class.java)
             startActivity(intent)
         }
 
         super.onViewCreated(view, savedInstanceState)
         val bottomTrans:Button=view.findViewById(R.id.btnTransportador)
         bottomTrans.setOnClickListener {
-            val intent=Intent(getActivity(),AdminCampesinosActivity::class.java)
+            val intent=Intent(getActivity(),Activity_admin_transportador::class.java)
             startActivity(intent)
         }
     }
