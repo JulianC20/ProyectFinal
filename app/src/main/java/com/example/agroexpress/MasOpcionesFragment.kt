@@ -9,12 +9,14 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.agroexpress.R
 import android.widget.*
+import androidx.navigation.Navigation
 
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+
 
 /**
  * A simple [Fragment] subclass.
@@ -25,7 +27,7 @@ class MasOpcionesFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
+    private lateinit var btnProducto: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -39,9 +41,16 @@ class MasOpcionesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mas_opciones, container, false)
 
+        val ll = inflater.inflate(R.layout.fragment_mas_opciones, container, false)
 
+        this.btnProducto =ll.findViewById(R.id.btnProducto)
+
+        btnProducto.setOnClickListener{
+            val navController = Navigation.findNavController(requireActivity(), androidx.navigation.fragment.R.id.nav_host_fragment_container)
+            navController.navigate(R.id.produc_RecyclerFragment)
+        }
+        return ll
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -51,12 +60,7 @@ class MasOpcionesFragment : Fragment() {
             startActivity(intent)
         }
 
-        super.onViewCreated(view, savedInstanceState)
-        val bottomProd:Button=view.findViewById(R.id.btnProducto)
-        bottomProd.setOnClickListener {
-            val intent=Intent(getActivity(),Activity_admin_productos::class.java)
-            startActivity(intent)
-        }
+
 
         super.onViewCreated(view, savedInstanceState)
         val bottomDesp:Button=view.findViewById(R.id.btnDespachos)

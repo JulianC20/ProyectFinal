@@ -39,6 +39,9 @@
         <action
             android:id="@+id/action_masOpcionesFragment_to_perfilFragment"
             app:destination="@id/perfilFragment" />
+        <action
+            android:id="@+id/action_masOpcionesFragment_to_produc_RecyclerFragment"
+            app:destination="@id/produc_RecyclerFragment" />
     </fragment>
     <fragment
         android:id="@+id/perfilFragment"
@@ -54,4 +57,23 @@
         android:name="com.example.agroexpress.AdminCampesinosActivity"
         android:label="activity_admin_campesinos"
         tools:layout="@layout/activity_admin_campesinos" />
+    <fragment
+        android:id="@+id/camEditarproductoFragment"
+        android:name="com.example.agroexpress.CamEditarproductoFragment"
+        android:label="fragment_cam_editarproducto"
+        tools:layout="@layout/fragment_cam_editarproducto" />
+    <fragment
+        android:id="@+id/admiProductosFragment"
+        android:name="com.example.agroexpress.AdmiProductosFragment"
+        android:label="fragment_admi_productos"
+        tools:layout="@layout/fragment_admi_productos" >
+        <action
+            android:id="@+id/action_admiProductosFragment_to_camEditarproductoFragment"
+            app:destination="@id/camEditarproductoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/produc_RecyclerFragment"
+        android:name="com.example.agroexpress.Produc_RecyclerFragment"
+        android:label="fragment_produc__recycler"
+        tools:layout="@layout/fragment_produc__recycler" />
 </navigation>
