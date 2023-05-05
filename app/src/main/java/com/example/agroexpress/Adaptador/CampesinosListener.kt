@@ -4,5 +4,5 @@ import org.json.JSONObject
 
 interface CampesinosListener {
 
-    fun onUsuariosClicked(usuarios: JSONObject, position: Int)
+    fun onCampesinosClicked(Campesinos: JSONObject, position: Int)
 }

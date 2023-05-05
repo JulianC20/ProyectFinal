@@ -14,7 +14,7 @@ import com.example.agroexpress.R
 import org.json.JSONObject
 import kotlin.jvm.internal.Intrinsics.Kotlin
 
-class CampesinosAdaptador  (private val CampesinosListner: ArrayList<JSONObject>, private val itemListener: ItemListener) : RecyclerView.Adapter<CampesinosAdaptador.ViewHolder>(){
+class CampesinosAdaptador  (private val CampesinosListener: ArrayList<JSONObject>, private val itemListener: ItemListener) : RecyclerView.Adapter<CampesinosAdaptador.ViewHolder>(){
 
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
@@ -25,10 +25,10 @@ class CampesinosAdaptador  (private val CampesinosListner: ArrayList<JSONObject>
         var telefono: TextView = view.findViewById(R.id.TV_telefono_campesino)
 
         fun bind(campesinos: JSONObject){
-            nombre.text = campesinos.getString("nombre")
-            apellido.text = campesinos.getString("apellido")
-            ciudad.text = campesinos.getString("ciudad")
-            telefono.text = campesinos.getString("telefono")
+            nombre.text = campesinos.getString(" Cam_Nombre")
+            apellido.text = campesinos.getString("Cam_Apellido")
+            ciudad.text = campesinos.getString("Cam_Ciudad")
+            telefono.text = campesinos.getString("Cam_Telefono")
         }
     }
 
@@ -37,19 +37,19 @@ class CampesinosAdaptador  (private val CampesinosListner: ArrayList<JSONObject>
             .from(parent.context)
             .inflate(R.layout.fragment_admi_campesinos,parent,false)
     )
-    override fun getItemCount() = this.CampesinosListner.size
+    override fun getItemCount() = this.CampesinosListener.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val campesino = CampesinosListner[position]
+        val Campesinos = CampesinosListener[position]
 
         try{
             Glide.with(holder.itemView.context)
-                  .load(campesino.get("imagen"))
+                  .load(Campesinos.get("imagen"))
                   .into(holder.imagen)
-            holder.bind(campesino)
+            holder.bind(Campesinos)
 
             holder.itemView.setOnClickListener{
-                itemListener.onItemClicked(campesino,position)
+                itemListener.onItemClicked(Campesinos,position)
             }
 
         }catch (e : Exception){
